@@ -7,7 +7,7 @@ function playGame(width, height) {
       newButton.setAttribute("x", x);
       newButton.setAttribute("y", y);
       newButton.textContext = "X";
-      newButton.setAttribute("onClick", "doButtonClicked(this);");
+      newButton.addEventListener("click", buttonClickedHandler);
       container.appendChild(newButton);
     }
     let lineBreak = document.createElement("br");
@@ -23,7 +23,8 @@ function getRandom(min, max) {
   return result;
 }
 
-function doButtonClicked(button) {
+function buttonClickedHandler(event) {
+  let button = event.target;
   let x = button.getAttribute("x");
   let y = button.getAttribute("y");
   if (x == cheeseX && y == cheeseY) {
