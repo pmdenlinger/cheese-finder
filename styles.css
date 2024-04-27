@@ -1,0 +1,20 @@
+.upButton,
+.downButton,
+.cheeseButton {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  min-width: 3em;
+  min-height: 3em;
+}
+
+.upButton {
+  background: lightblue;
+}
+
+.downButton {
+  background: lightpink;
+}
+
+.cheeseButton {
+  background: yellow;
+}
